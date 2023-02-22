@@ -18,8 +18,5 @@ class DashboardController extends Controller
             'featuredMovies' => $featuredMovies,
             'movies' => $movies,
         ]);
-
-        // return Inertia::render('User/Dashboard/Index');
-        // return inertia('User/Dashboard/Index');
     }
 }

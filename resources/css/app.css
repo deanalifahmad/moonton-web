@@ -1,14 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import "input.css";
 @import "button.css";
 @import "sidebar.css";
-
-.flex::before,
-.flex::after {
-    display: none !important;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* TextInput.jsx */
 .input-error {
@@ -72,6 +67,11 @@
     }
 }
 /* End Sidebar.jsx */
+
+.flex::before,
+.flex::after {
+    display: none !important;
+}
 
 @layer components {
     [type='text'], [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select {
