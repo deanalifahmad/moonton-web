@@ -5,7 +5,7 @@ export default function SubscriptionCard({ id, name, price, durationInMonth, fea
         <>
             {/* <!-- Basic --> */}
             {!isPremium && (
-                <div className="flex flex-col gap-[30px] py-[30px] px-7 outline outline-1 outline-[#F1F1F1] rounded-[26px] text-black w-[300px] h-[max-content]">
+                <div className="flex flex-col gap-[30px] py-[30px] px-7 outline outline-1 outline-[#F1F1F1] rounded-[26px] text-black w-[300px] h-[max-content] shadow-lg">
                     {/* <!-- Top Content: Name-Price --> */}
                     <div>
                         <div className="text-sm mb-2">{name}</div>
@@ -38,7 +38,7 @@ export default function SubscriptionCard({ id, name, price, durationInMonth, fea
 
             {/* <!-- For Greatest --> */}
             {isPremium && (
-                <div className="flex flex-col gap-[30px] py-[30px] px-7 outline outline-1 outline-[#F1F1F1] rounded-[26px] text-white w-[300px] bg-black">
+                <div className="flex flex-col gap-[30px] py-[30px] px-7 outline outline-1 outline-[#F1F1F1] rounded-[26px] text-white w-[300px] bg-black shadow-lg">
                     {/* <!-- Ornament Icon --> */}
                     <div className="bg-alerange rounded-full p-[13px] max-w-max">
                         <img

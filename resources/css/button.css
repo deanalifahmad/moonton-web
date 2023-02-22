@@ -1,19 +1,19 @@
 .btn-primary {
-    @apply bg-alerange text-white;
+    @apply bg-alerange text-white hover:bg-orange-500 hover:duration-300;
 }
 
 .btn-warning {
-    @apply bg-yellow-500 text-white;
+    @apply bg-yellow-400 text-white hover:bg-yellow-500 hover:duration-300;
 }
 
 .btn-danger {
-    @apply bg-red-500 text-white;
+    @apply bg-red-500 text-white hover:bg-red-600 hover:duration-300;
 }
 
 .btn-light-outline {
-    @apply text-white border border-white;
+    @apply text-white border border-white hover:bg-alerange hover:border-transparent hover:duration-300;
 }
 
 .btn-white-outline {
-    @apply text-black border border-[#f1f1f1];
+    @apply text-black border border-[#f1f1f1] hover:text-white hover:bg-alerange hover:border-transparent hover:duration-300;
 }

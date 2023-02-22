@@ -28,6 +28,7 @@ export default function FeaturedMovie({
                 <div className="p-[30px] flex items-center gap-1">
                     <img 
                         src="/icons/ic_star.svg"
+                        className='bg-alerange rounded-full p-[5px]'
                         alt="" 
                     />
                     <span className="text-sm font-medium text-white mt-1">
@@ -36,8 +37,8 @@ export default function FeaturedMovie({
                 </div>
             </div>
             {/* Bottom Detail */}
-            <div className="absolute bottom-0 h-[100px] left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px]
-                rounded-br-[28px] flex justify-between items-center px-7 h-[130px]">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px]
+                rounded-br-[28px] flex justify-between items-center px-7 h-[120px] backdrop-blur-[1px]">
                 <div>
                     <div className="font-medium text-[22px] text-white">
                         {name}
@@ -56,7 +57,7 @@ export default function FeaturedMovie({
                 </div>
             </div>
             <Link
-                href={route('prototype.movie.show', slug)}
+                href={route('user.dashboard.movie.show', slug)}
                 className="inset-0 absolute z-50"
             >
             </Link>
