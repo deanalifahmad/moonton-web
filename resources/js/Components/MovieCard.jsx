@@ -17,7 +17,7 @@ export default function MovieCard({ slug, name, category, thumbnail }) {
                 alt=""
             />
             <div
-                className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px] rounded-br-[28px]">
+                className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px] rounded-br-[28px] backdrop-blur-[1px]">
                 <div className="px-7 pb-7">
                     <div className="font-medium text-xl text-white">
                         {name}
@@ -37,7 +37,7 @@ export default function MovieCard({ slug, name, category, thumbnail }) {
                 />
             </div>
             <Link
-                href={route('prototype.movie.show', slug)}
+                href={route('user.dashboard.movie.show', slug)}
                 className="inset-0 absolute z-50"
             >
             </Link>
