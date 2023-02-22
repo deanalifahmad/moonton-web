@@ -37,8 +37,8 @@ export default function FeaturedMovie({
                 </div>
             </div>
             {/* Bottom Detail */}
-            <div className="absolute bottom-0 h-[100px] left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px]
-                rounded-br-[28px] flex justify-between items-center px-7 h-[130px]">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px]
+                rounded-br-[28px] flex justify-between items-center px-7 h-[120px] backdrop-blur-[1px]">
                 <div>
                     <div className="font-medium text-[22px] text-white">
                         {name}
