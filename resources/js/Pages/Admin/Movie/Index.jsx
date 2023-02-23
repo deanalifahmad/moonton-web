@@ -1,12 +1,14 @@
 import Authenticated from "@/Layouts/Authenticated/Index";
 import Button from "@/Components/Button";
 import FlashMessage from "@/Components/FlashMessage";
-import { Head, Link } from "@inertiajs/react";
+import { Head, Link, useForm } from "@inertiajs/react";
 
 export default function Index({ auth, flashMessage, movies }) {
+    const { delete: destroy, put } = useForm();
+
     return (
         <Authenticated auth={auth}>
-            <Head title="Admin - Dashboard" />
+            <Head title="Admin - List of Movie" />
             <Link href={route('admin.dashboard.movie.create')}>
                 <Button
                     type="button"
@@ -21,7 +23,7 @@ export default function Index({ auth, flashMessage, movies }) {
                 <FlashMessage message={flashMessage.message}/>
             )}
 
-            <table className="table-fixed w-full text-center">
+            <table className="table-auto w-full text-center">
                 <thead>
                     <tr>
                         <th>Image</th>
@@ -37,7 +39,7 @@ export default function Index({ auth, flashMessage, movies }) {
                             <td>
                                 <img
                                     src={`/storage/${movie.thumbnail}`}
-                                    className="w-32 rounded-md"
+                                    className="w-32 rounded-md shadow-md"
                                 />
                             </td>
                             <td>
@@ -59,9 +61,18 @@ export default function Index({ auth, flashMessage, movies }) {
                                 </Link>
                             </td>
                             <td>
-                                <Button type="button" variant="danger">
-                                    Delete
-                                </Button>
+                                <div
+                                    onClick={() => {
+                                        if (confirm('Are you sure?')) {
+                                            movie.deleted_at ? put(route('admin.dashboard.movie.restore', movie.id)) : destroy(route('admin.dashboard.movie.destroy', movie.id));
+                                        }
+                                        // movie.deleted_at ? put(route('admin.dashboard.movie.restore', movie.id)) : destroy(route('admin.dashboard.movie.destroy', movie.id));
+                                    }}
+                                >
+                                    <Button type="button" variant="danger">
+                                        {movie.deleted_at ? 'Restore' : 'Delete'}
+                                    </Button>
+                                </div>
                             </td>
                         </tr>
                     ))}
