@@ -33,6 +33,15 @@ class MovieTableSeeder extends Seeder
                 'is_featured' => 0,
             ],
             [
+                'name' => 'The Lion King',
+                'slug' => 'the-lion-king',
+                'category' => 'Animation',
+                'video_url' => 'https://www.youtube.com/watch?v=4CbLXeGSDxg',
+                'thumbnail' => 'https://i.ytimg.com/vi/4CbLXeGSDxg/maxresdefault.jpg',
+                'rating' => 3.7,
+                'is_featured' => 0,
+            ],
+            [
                 'name' => 'Joker',
                 'slug' => 'joker',
                 'category' => 'Crime',
@@ -75,6 +84,15 @@ class MovieTableSeeder extends Seeder
                 'video_url' => 'https://www.youtube.com/watch?v=u9Mv98Gr5pY',
                 'thumbnail' => 'https://i.ytimg.com/vi/u9Mv98Gr5pY/maxresdefault.jpg',
                 'rating' => 3.7,
+                'is_featured' => 0,
+            ],
+            [
+                'name' => 'Spirited Away',
+                'slug' => 'spirited-away',
+                'category' => 'Animation',
+                'video_url' => 'https://www.youtube.com/watch?v=ByXuk9QqQkk',
+                'thumbnail' => 'https://i.ytimg.com/vi/ByXuk9QqQkk/maxresdefault.jpg',
+                'rating' => 3.6,
                 'is_featured' => 0,
             ],
             [
@@ -123,15 +141,6 @@ class MovieTableSeeder extends Seeder
                 'is_featured' => 1,
             ],
             [
-                'name' => 'The Lion King',
-                'slug' => 'the-lion-king',
-                'category' => 'Animation',
-                'video_url' => 'https://www.youtube.com/watch?v=4CbLXeGSDxg',
-                'thumbnail' => 'https://i.ytimg.com/vi/4CbLXeGSDxg/maxresdefault.jpg',
-                'rating' => 3.7,
-                'is_featured' => 1,
-            ],
-            [
                 'name' => 'Deadpool',
                 'slug' => 'deadpool',
                 'category' => 'Action',
@@ -141,12 +150,12 @@ class MovieTableSeeder extends Seeder
                 'is_featured' => 1,
             ],
             [
-                'name' => 'Spirited Away',
-                'slug' => 'spirited-away',
+                'name' => 'The Incredibles 2',
+                'slug' => 'the-incredibles-2',
                 'category' => 'Animation',
-                'video_url' => 'https://www.youtube.com/watch?v=ByXuk9QqQkk',
-                'thumbnail' => 'https://i.ytimg.com/vi/ByXuk9QqQkk/maxresdefault.jpg',
-                'rating' => 3.6,
+                'video_url' => 'https://www.youtube.com/watch?v=i5qOzqD9Rms',
+                'thumbnail' => 'https://i.ytimg.com/vi/i5qOzqD9Rms/maxresdefault.jpg',
+                'rating' => 3.7,
                 'is_featured' => 1,
             ]
         ];
